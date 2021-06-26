@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gmail</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" id="NavbarStyle" >
+        <div class="collapse navbar-collapse col-2" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <img src="img/logo.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="form-group has-search col-6">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <div id="NavbarStyleFaicon">
+            <button type="button" class="btn" >
+                <i class="faiconColor fa fa-question" aria-hidden="true" id="faiconColor"></i>
+            </button>
+            <button type="button" class="btn" >
+                <i class="faiconColor fa fa-cog" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn" >
+                <i class="faiconColor fa fa-th" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn" id="buttonUser">
+                s
+            </button>
+        </div>
+    </nav>
+        <section class="main" id="Main">
+            <div class="container-fluid">
+                <div class="row" id="StylePadding">
+                    <div class="col-2 StyleDivsContend StyleDivsContend2">
+                        <form>
+                            <button type="button" onclick="RedactarMSG()" class="btn col-10" id="Redactar"><img src="img/+gmail.PNG" alt="" style="width: 36px;"> Redactar</button>
+                            <div class="form-group" style="padding-top: 12px;">
+                              <button type="button" onclick="DisplayContCentral(1)" class="btn col-10 Redactars" id="IDButtonLateral1"><i class="fa fa-envelope" aria-hidden="true"></i> Recibidos</button>
+                              <button type="button" onclick="DisplayContCentral(2)" class="btn col-10 Redactars" id="IDButtonLateral2"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviados</button>
+                              <button type="button" onclick="DisplayContCentral(3)" class="btn col-10 Redactars" id="IDButtonLateral3"><i class="fa fa-star" aria-hidden="true"></i> Destacados</button>
+                              <button type="button" onclick="DisplayContCentral(4)" class="btn col-10 Redactars" id="IDButtonLateral4"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Spam</button>
+                              <button type="button" onclick="DisplayContCentral(5)" class="btn col-10 Redactars" id="IDButtonLateral5"><i class="fa fa-trash" aria-hidden="true"></i> Papelera</button>
+                              <button type="button" onclick="DisplayContCentral(6)" class="btn col-10 Redactars" id="IDButtonLateral6"><i class="fa fa-arrow-down" aria-hidden="true"></i> Más</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="col-10 StyleDivsContend" id="StyleDivsContend">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="col-5"  id="DivSquareMSG" style="display: none;">
+            <div id="DivSquareHeader" >
+                <label style="color: white;" class="col-11" for="exampleInputEmail1">Mensaje Nuevo</label>
+                <button type="submit" onclick="RedactarMSG()" class="btn btn-danger buttonDivSquareCentral">X</button>
+            </div>
+            <div id="DivSquareBody">
+                <form class="row" id="DivSquareBodyForm">
+                    <div class="form-group col-12 positionDisplayRedactar">
+                      <label class="col-2" for="exampleInputEmail1">De:</label>
+                      <input  type="text" class="col-10 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group col-12 positionDisplayRedactar">
+                      <label class="col-2" for="exampleInputEmail1">Para:</label>
+                      <input  type="text" class="col-10 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group col-12 positionDisplayRedactar">
+                      <label class="col-2" for="exampleInputEmail1">Asunto:</label>
+                      <input  type="text" class="col-10 form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group col-12">
+                      <label class="col-2" for="exampleFormControlTextarea1">Mensaje:</label>
+                      <textarea class="form-control col-12" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger buttonDivSquareCentral buttonDivSquareCentralBody">Enviar</button>
+                  </form>
+            </div>
+        </div>
+         
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>
